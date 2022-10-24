@@ -18,7 +18,7 @@ header{
   /* min-width: 100vh; */
   display:flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   flex-grow: 1;
   flex-shrink: 1;
   justify-content: space-evenly;
@@ -79,6 +79,21 @@ main {
   align-content: center;
 }
 
+.project{
+  background-color: #20252c;
+  padding: .3em;
+  box-shadow: 2px 2px #1a1a1a;
+  margin: 2vh;
+}
+
+.projectImage{
+  /* border: 3px groove #181c25; */
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  box-shadow: 1px 1px #1e1e1e;
+}
+
 h1 {
   font-family: Poppins;
   font-size: calc(1em + 3vw);
@@ -94,8 +109,8 @@ h2 {
   font-weight: 600;
   letter-spacing: 0.3px;
   text-align: left;
-  color: #ffa500;
-  padding: 10px 0px 10px 10px;
+  color: #5e7898;
+  padding: 10px 0px 0px 10px;
 }
 
 img {
@@ -118,7 +133,7 @@ img {
 
 }
 
-.time {
+.icon {
   padding-left: 10px;
   padding-top: 10px;
   width: 20px;
@@ -144,9 +159,17 @@ img {
   line-height: 1.29;
   letter-spacing: 0.1px;
   text-align: left;
-  color: #4a4a4a;
+  color: #968e8e;
   padding: 10px 0px 10px 10px;
-  border-top: 1px solid #4a4a4a;
+  /* border-top: 1px solid #4a4a4a; */
+  border-top: .2vh groove #a19393;
+}
+
+.description a{
+  color:#5e7898;
+}
+.description a:hover{
+  color:#574d8f;
 }
 
 .logo {
@@ -175,6 +198,11 @@ footer {
   flex-grow: 1;
   flex-shrink: 1;
   justify-content: space-evenly;
+
+  font-size: calc(.8em + .2vw);
+  font-family: 'Work Sans';
+  text-align: center;
+  color: #e7d8d8;
 
 }
 
