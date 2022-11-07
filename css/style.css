@@ -113,6 +113,19 @@ h2 {
   padding: 10px 0px 0px 10px;
 }
 
+h2 a:link{
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-align: left;
+  color: #5e7898;
+}
+
+h2 a:hover{
+  color: #574d8f;
+}
+
 img {
   /* width: 100%;
   height: 50vh;
