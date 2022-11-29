@@ -1,22 +1,30 @@
-html{
+html {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   margin: 0;
-  background-color: #1e1e1e;;
+  background-color: #1e1e1e;
+  ;
 }
 
 
 /* This section refers to the header and footer elements */
 
-header{
-  background-color: #242b36;
+header {
+  /* background-color: #242b36; */
+  background-image: radial-gradient(rgba(23, 30, 43, 0.9), rgba(23, 30, 43, 0.9)),
+    linear-gradient(rgba(36, 43, 54, .8), rgba(36, 43, 54, .8)),
+    url('../images/header-image.jpg');
+  background-blend-mode: hard-light, color;
+  background-size: cover;
+  background-position: right center;
   text-align: center;
+
   /* min-width: 500px; */
-  min-height: 50vh;
+  min-height: 100vh;
   /* min-width: 100vh; */
-  display:flex;
+  display: flex;
   align-items: center;
   flex-direction: row;
   flex-grow: 1;
@@ -24,6 +32,7 @@ header{
   justify-content: space-evenly;
   border-bottom: 1vh groove #a19393;
 }
+
 .wrapper {
   max-width: 1150px;
   margin: auto;
@@ -33,10 +42,10 @@ header{
 }
 
 .bio {
-font-size: calc(1em + .6vw);
-font-family: 'Roboto', sans-serif;
-text-align: center;
-color: #e7d8d8;
+  font-size: calc(1em + .6vw);
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: #e7d8d8;
 }
 
 .buttonBox {
@@ -57,19 +66,19 @@ color: #e7d8d8;
 }
 
 .myButton:hover {
-    background-color:#574d8f;
+  background-color: #574d8f;
 }
 
 .myButton:active {
-    position:relative;
-    top:1px;
+  position: relative;
+  top: 1px;
 }
 
 /* This section refers to the main grid elements */
 
 main {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(40%, 1fr) ) ;
+  grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
   grid-gap: 20px;
   margin-top: 44px;
 
@@ -79,14 +88,14 @@ main {
   align-content: center;
 }
 
-.project{
+.project {
   background-color: #20252c;
   padding: .3em;
   box-shadow: 2px 2px #1a1a1a;
   margin: 2vh;
 }
 
-.projectImage{
+.projectImage {
   /* border: 3px groove #181c25; */
   width: 100%;
   height: 50vh;
@@ -113,11 +122,11 @@ h2 {
   padding: 10px 0px 0px 10px;
 }
 
-h2 a:link{
+h2 a:link {
   color: #5e7898;
 }
 
-h2 a:hover{
+h2 a:hover {
   color: #574d8f;
 }
 
@@ -133,13 +142,9 @@ img {
   width: 100%;
 }
 
-.a {
+.a {}
 
-}
-
-.c {
-
-}
+.c {}
 
 .icon {
   padding-left: 10px;
@@ -147,6 +152,7 @@ img {
   width: 20px;
   height: auto;
   display: inline;
+  color: #585858;
 }
 
 .mins {
@@ -156,7 +162,7 @@ img {
   font-weight: 500;
   letter-spacing: 0.3px;
   text-align: left;
-  color: #4a4a4a;
+  color: #585858;
   position: relative;
   bottom: 5px;
 }
@@ -174,11 +180,12 @@ img {
   border-top: .2vh groove #a19393;
 }
 
-.description a{
-  color:#5e7898;
+.description a {
+  color: #5e7898;
 }
-.description a:hover{
-  color:#574d8f;
+
+.description a:hover {
+  color: #574d8f;
 }
 
 .logo {
@@ -195,25 +202,28 @@ img {
 
 footer {
   border-top: 1vh groove #a19393;
-  margin-top: 44px;
-  background-color: #242b36;
+  margin-top: 45px;
+  background-color: rgb(36, 43, 54);
   text-align: center;
+  color: rgba(231, 216, 216, .5);
   /* min-width: 500px; */
-  min-height: 13vh;
+  min-height: 9vh;
   /* min-width: 100vh; */
-  display:flex;
+  display: flex;
   align-items: center;
   flex-direction: column;
   flex-grow: 1;
   flex-shrink: 1;
   justify-content: space-evenly;
 
-  font-size: calc(.8em + .2vw);
+  font-size: calc(.9em + .2vw);
   font-family: 'Roboto', sans-serif;
   text-align: center;
-  color: #e7d8d8;
+  /* color: #e7d8d8; */
 
 }
+
+
 
 @media all and (max-width:700px) {
   main {
