@@ -45,7 +45,7 @@ header {
   font-size: calc(1em + .6vw);
   font-family: 'Roboto', sans-serif;
   text-align: center;
-  color: #e7d8d8;
+  color: #f2e3e3;
 }
 
 .buttonBox {
@@ -154,6 +154,10 @@ img {
   display: inline;
   color: #585858;
 }
+.icon img{
+  color: #a39898; 
+  /* TODO: fix icon color */
+}
 
 .mins {
   display: inline-block;
@@ -162,7 +166,7 @@ img {
   font-weight: 500;
   letter-spacing: 0.3px;
   text-align: left;
-  color: #585858;
+  color: #a39898;
   position: relative;
   bottom: 5px;
 }
@@ -174,7 +178,7 @@ img {
   line-height: 1.29;
   letter-spacing: 0.1px;
   text-align: left;
-  color: #968e8e;
+  color: #b1a7a7;
   padding: 10px 0px 10px 10px;
   /* border-top: 1px solid #4a4a4a; */
   border-top: .2vh groove #a19393;
