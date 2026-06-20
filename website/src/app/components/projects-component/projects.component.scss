@@ -1,0 +1,35 @@
+.projects .container {
+  padding: 1.25rem;
+  // max-width: 1100px;
+  margin: 0 auto;
+}
+
+.projects h2 {
+  margin: 0 0 1.5rem 0;
+}
+
+.projects .grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+app-project-card {
+  width: 100%;
+}
+
+.visual-alpha { background: linear-gradient(135deg,#FF41F8,#7702FF); }
+.visual-beta  { background: linear-gradient(135deg,#FF7A7A,#CC26D5); }
+.visual-gamma { background: linear-gradient(135deg,#FFD166,#FF41F8); }
+
+.card h3 { margin: 0.5rem 0 0.25rem 0; }
+.muted { color: #555; margin: 0 0 0.75rem 0; }
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  background: linear-gradient(90deg,#F06 0%,#7702FF 100%);
+  color: #fff;
+  text-decoration: none;
+}

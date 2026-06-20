@@ -1,0 +1,19 @@
+/* App-wide CSS variables for easy theming */
+:root {
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --text-primary: #0f172a;
+  --text-muted: #475569;
+
+  --accent-1: #0066ff; /* bright blue */
+  --accent-2: #ff2dd6; /* vivid pink */
+  --accent-3: #7a00ff; /* purple */
+
+  --card-bg: #ffffff;
+  --card-border: rgba(15,23,42,0.06);
+
+  --gradient-vertical: linear-gradient(180deg, var(--accent-1), var(--accent-2));
+  --gradient-horizontal: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+
+  --max-width: 1300px;
+}

@@ -1,0 +1,86 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  min-height: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Jersey10, Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1.2em;
+  background: #f5f7fb;
+  color: #111827;
+}
+* {
+  box-sizing: border-box;
+}
+
+.page-section {
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: pixelated;
+  min-height: calc(100vh - 140px);
+}
+
+app-root {
+  display: block;
+  position: relative;
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: pixelated;
+  overflow: hidden;
+}
+
+app-root::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.45));
+  pointer-events: none;
+  z-index: 0;
+}
+
+app-root.home {
+  background-image: url('assets/images/3-31-2023-enlarged.gif');
+}
+
+app-root.about {
+  background-image: url('assets/images/5-12-enlarged.gif');
+}
+
+app-root.projects {
+  background-image: url('assets/images/4-13-2023-enlarged.gif');
+}
+
+@font-face {
+    font-family: 'Jersey10';
+    src: url('assets/fonts/Jersey_10/Jersey10-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body,
+app-root,
+.page-section,
+.app-main,
+footer.app-footer {
+  position: relative;
+  z-index: 1;
+}
+
+@font-face {
+    font-family: 'Jacquard12';
+    src: url('assets/fonts/Jacquard_12/Jacquard12-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Micro5';
+    src: url('assets/fonts/Micro_5/Micro5-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

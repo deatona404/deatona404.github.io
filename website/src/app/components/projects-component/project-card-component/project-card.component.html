@@ -1,0 +1,21 @@
+<article class="card" [class.reverse]="reverse">
+  <div class="card-content">
+    <div class="card-visual">
+      <img *ngIf="imageSrc; else gradientVisual"
+           [src]="imageSrc"
+           [alt]="title + ' visual'"
+           class="visual-img" />
+      <ng-template #gradientVisual>
+        <div class="visual-fallback" [ngClass]="'visual-' + variant"></div>
+      </ng-template>
+    </div>
+    <div class="card-copy">
+      <h3>{{ title }}</h3>
+      <p class="muted">{{ description }}</p>
+      <div class="card-actions">
+        <a class="btn" [href]="href">{{ buttonText }}</a>
+        <span *ngIf="note" class="note">{{ note }}</span>
+      </div>
+    </div>
+  </div>
+</article>
