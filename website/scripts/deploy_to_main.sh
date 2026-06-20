@@ -48,14 +48,11 @@ else
   git worktree add --detach "$DEPLOY_WORKTREE_DIR" origin/main
 fi
 
-# Clean deploy directory (preserve .git)
-shopt -s dotglob
-rm -rf "$DEPLOY_WORKTREE_DIR"/* || true
-rm -rf "$DEPLOY_WORKTREE_DIR"/.[!.]* || true
-shopt -u dotglob
+# Clean deploy directory, preserving the worktree metadata directory
+find "$DEPLOY_WORKTREE_DIR" -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} + || true
 
-# Copy build files into the worktree
-cp -a "$BUILD_DIR"/* "$DEPLOY_WORKTREE_DIR"/
+# Copy build files into the worktree root, preserving hidden files if present
+cp -a "$BUILD_DIR"/. "$DEPLOY_WORKTREE_DIR"/
 
 # Commit & push from the worktree
 pushd "$DEPLOY_WORKTREE_DIR" >/dev/null
