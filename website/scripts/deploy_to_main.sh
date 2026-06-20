@@ -7,6 +7,7 @@ set -euo pipefail
 ROOT_DIR=$(pwd)
 BUILD_CMD="npm run build"
 BUILD_DIR="dist/website"
+BUILD_SUBDIR="$BUILD_DIR/browser"
 DEPLOY_WORKTREE_DIR="$ROOT_DIR/.deploy_main"
 
 # Ensure git and npm are available
@@ -32,6 +33,11 @@ if [ ! -d "$BUILD_DIR" ]; then
   exit 1
 fi
 
+if [ ! -d "$BUILD_SUBDIR" ]; then
+  echo "Expected browser build subdirectory not found: $BUILD_SUBDIR" >&2
+  exit 1
+fi
+
 # Fetch latest refs
 git fetch origin main
 
@@ -52,7 +58,7 @@ fi
 find "$DEPLOY_WORKTREE_DIR" -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} + || true
 
 # Copy build files into the worktree root, preserving hidden files if present
-cp -a "$BUILD_DIR"/. "$DEPLOY_WORKTREE_DIR"/
+cp -a "$BUILD_SUBDIR"/. "$DEPLOY_WORKTREE_DIR"/
 
 # Commit & push from the worktree
 pushd "$DEPLOY_WORKTREE_DIR" >/dev/null
