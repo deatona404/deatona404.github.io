@@ -1,10 +1,32 @@
 <section class="page-section about">
   <div class="container">
-    <h2>About Me</h2>
-    <p>This is a placeholder About page. Replace with your content.</p>
+    <div class="about-hero">
+      <figure class="about-portrait">
+        <img src="assets/images/pixel-art-portrait-1-enlarge-crop.gif" alt="Pixel art portrait" />
+      </figure>
+      <div class="about-copy">
+        <h2>About Me</h2>
+        <p>I am a software engineer with experience in web development, microservices, and microcontrollers. Aside from the coding space, I have some experience in physical engineered solutions. In my free time, I like to draw, paint, or all other sorts of art. My preferred medium is digital painting, but I dabble in animation and 3D modeling. I'll also never turn down a good book!</p>
+      </div>
+    </div>
+
     <h2>Education</h2>
-    <p>This is a placeholder Education section. Replace with your content.</p>
+    <p>I have an M.Eng. and B.S. in Computer Science from Virginia Tech.</p>
+    <br>
     <h2>Contact</h2>
-    <p>This is a placeholder Contact section. Replace with your content.</p>
+    <p class="contact-links">
+      <a href="https://www.linkedin.com/in/allisondeaton/" rel="noreferrer">LinkedIn</a>
+      <span class="separator">|</span>
+      <a href="https://github.com/deatona404" rel="noreferrer">GitHub</a>
+      <span class="separator">|</span>
+      <button 
+        class="email-button" 
+        (click)="copyEmail()"
+        (mouseenter)="onEmailHover()"
+        (mouseleave)="onEmailLeave()">
+        <span class="email-text">{{ showTooltip ? email : 'Email' }}</span>
+        <span class="tooltip" *ngIf="showTooltip">{{ tooltipText }}</span>
+      </button>
+    </p>
   </div>
 </section>
